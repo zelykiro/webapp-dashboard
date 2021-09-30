@@ -9,7 +9,7 @@ Web-App Dashboard
 
 
 ## How It Works
-- a
+- 
 
 ### Goal of the project
 
