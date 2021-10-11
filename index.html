@@ -114,9 +114,9 @@
 				</a>
 			</nav>
 			<main>
+				<!-- <h2 class="dashboard__title">Dashboard</h2> -->
 				<div class="dashboard">
-					<!-- <h2 class="dashboard__title">Dashboard</h2>
-					<span class="alert">Alert: You have unread messages</span> -->
+					<!--<span class="alert">Alert: You have unread messages</span> -->
 					<!-- <section class="graph" id="graphs">
 						<div class="graph__main">
 							<h3 class="graph__title">TRAFFIC</h3>
@@ -180,7 +180,7 @@
 						<div class="new-member">
 							<h3>NEW MEMBERS</h3>
 							<div class="member">
-								<img class="member__image" src="images/member-1.jpg" />
+								<img src="images/member-1.jpg" />
 								<h4 class="member__name">Victoria Chambers</h4>
 								<a class="member__mail" href="victoria.chambers80@example.com"
 									>victoria.chambers80@example.com</a
@@ -188,7 +188,7 @@
 								<p>10/15/20</p>
 							</div>
 							<div class="member">
-								<img class="member__image" src="images/member-2.jpg" />
+								<img src="images/member-2.jpg" />
 								<h4 class="member__name">Dale Byrd</h4>
 								<a class="member__mail" href="dale.byrd52@example.com"
 									>dale.byrd52@example.com</a
@@ -196,7 +196,7 @@
 								<p>10/15/20</p>
 							</div>
 							<div class="member">
-								<img class="member__image" src="images/member-3.jpg" />
+								<img src="images/member-3.jpg" />
 								<h4 class="member__name">Dawn Wood</h4>
 								<a class="member__mail" href="dawn.wood16@example.com"
 									>dawn.wood16@example.com</a
@@ -204,7 +204,7 @@
 								<p>10/15/20</p>
 							</div>
 							<div class="member">
-								<img class="member__image" src="images/member-4.jpg" />
+								<img src="images/member-4.jpg" />
 								<h4 class="member__name">Dan Oliver</h4>
 								<a class="member__mail" href="dan.oliver82@example.com"
 									>dan.oliver82@example.com</a
@@ -215,7 +215,7 @@
 						<div class="recent-activity">
 							<h3>RECENT ACTIVITY</h3>
 							<div class="recent">
-								<img class="recent__image" src="images/member-1.jpg" />
+								<img src="images/member-1.jpg" />
 								<p class="recent__info">
 									Victoria Chambers commented on
 									<strong>WebApp's SEO Tips</strong>
@@ -223,7 +223,7 @@
 								<p>4 hours ago</p>
 							</div>
 							<div class="recent">
-								<img class="recent__image" src="images/member-2.jpg" />
+								<img src="images/member-2.jpg" />
 								<p class="recent__info">
 									Dale Byrd liked the post
 									<strong>Facebook's Changes for 2021</strong>
@@ -231,7 +231,7 @@
 								<p>5 hours ago</p>
 							</div>
 							<div class="recent">
-								<img class="recent__image" src="images/member-3.jpg" />
+								<img src="images/member-3.jpg" />
 								<p class="recent__info">
 									Dawn Wood commented on
 									<strong>Facebook's Changes for 2021</strong>
@@ -239,7 +239,7 @@
 								<p>5 hours ago</p>
 							</div>
 							<div class="recent">
-								<img class="recent__image" src="images/member-4.jpg" />
+								<img src="images/member-4.jpg" />
 								<p class="recent__info">
 									Dan Oliver posted <strong>WebApp's SEO Tips</strong>
 								</p>
@@ -259,29 +259,45 @@
 							<button type="submit">SEND</button>
 						</form>
 					</section>
-					<!-- <section class="settings" id="settings">
-						<h2 class="settings__title">SETTINGS</h2>
-						<label for="email-notify">Send Email Notifications</label>
-						<input
-							type="checkbox"
-							id="email-notify"
-							name="email-notification"
-						/>
-						<label for="profile-visibilty">Set Profile to Public</label>
-						<input
-							type="checkbox"
-							id="profile-visibilty"
-							name="profile-visibilty"
-						/>
+					<section class="settings" id="settings">
+						<h3>SETTINGS</h3>
+						<div class="checkbox-container">
+							<label class="label-container" for="email-notify"
+								>Send Email Notifications
+							</label>
+							<label class="slider-container" for="email-notify">
+								<input
+									type="checkbox"
+									id="email-notify"
+									name="email-notification"
+								/>
+								<span class="slider">OFF</span>
+							</label>
+						</div>
+						<div class="checkbox-container">
+							<label class="label-container" for="profile-visibilty">
+								Set Profile to Public</label
+							>
+							<label class="slider-container" for="profile-visibilty">
+								<input
+									type="checkbox"
+									id="profile-visibilty"
+									name="profile-visibilty"
+								/>
+								<span class="slider">OFF</span>
+							</label>
+						</div>
 						<select id="timezone" name="timezone">
 							<option value="" disabled selected>Select Timezone</option>
 							<option value="UTC +9">Japan Standard Time</option>
 							<option value="UTC -4">Eastern Daylight Time</option>
 							<option value="UTC -7">Pacific Daylight Time</option>
 						</select>
-						<button type="button" class="savebtn">SAVE</button>
-						<button type="button" class="cancelbtn">CANCEL</button>
-					</section> -->
+						<div class="settings__btns">
+							<button type="button" class="savebtn">SAVE</button>
+							<button type="button" class="cancelbtn">CANCEL</button>
+						</div>
+					</section>
 				</div>
 			</main>
 		</div>
