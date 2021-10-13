@@ -203,6 +203,100 @@ button {
 ================= GRAPHS SECTION =================
 =============================================== */
 
+.graph {
+	margin: 0.5rem auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.graph__title {
+	width: 90%;
+	margin: 0 auto 0.25rem auto;
+	align-self: flex-start;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+
+.graph__web {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	padding: 0.5rem 0 0.25rem 0;
+	margin: 0.25rem auto;
+}
+
+.graph__web ul {
+	width: 80%;
+	margin: 0.5rem auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.graph__web ul li {
+	list-style: none;
+	font-size: 0.7rem;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.graph__daily,
+.graph__mobile,
+.graph__social {
+	width: 100%;
+	padding: 0.5rem 0 0.25rem 0;
+	margin: 0.25rem auto;
+	border-top: 1px solid #9b9ebb;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	width: 90%;
+	height: 4.75rem;
+	margin: 0.75rem auto 0.5rem auto;
+	border-radius: 8px;
+	border: 2px solid #c7c4c4;
+	background-color: #eeebeb;
+}
+
+.social span {
+	height: 3rem;
+	width: 3rem;
+	margin-left: 0.5rem;
+	margin-right: 1rem;
+	border-radius: 50%;
+	position: relative;
+	background-color: #7477bf;
+}
+
+.social__svg {
+	position: absolute;
+	left: 0.775rem;
+	top: 0.775rem;
+	height: 1.5rem;
+	width: 1.5rem;
+	fill: white;
+}
+
+.social div {
+	display: flex;
+	flex-direction: column;
+}
+
+.social__title {
+	color: #7477bf;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.social__traffic {
+	margin-top: -0.2rem;
+	font-size: 1.9rem;
+	font-weight: 200;
+}
+
 /* ===============================================
 ================ MEMBERS SECTION =================
 =============================================== */
@@ -213,7 +307,7 @@ button {
 
 .new-member,
 .recent-activity {
-	padding: 0.75rem 0 0.25rem 0;
+	padding: 0.5rem 0 0.25rem 0;
 	margin: 0.5rem auto;
 	display: flex;
 	flex-direction: column;
@@ -227,7 +321,7 @@ button {
 	margin: 0 auto 0.25rem auto;
 	align-self: flex-start;
 	font-size: 0.7rem;
-	font-weight: 400;
+	font-weight: 600;
 	letter-spacing: 0.5px;
 }
 
@@ -318,7 +412,7 @@ button {
 
 .settings {
 	width: 100%;
-	padding: 0.75rem 0 0.25rem 0;
+	padding: 0.5rem 0 0.25rem 0;
 	margin: 0.5rem auto;
 	display: flex;
 	flex-direction: column;
@@ -332,7 +426,7 @@ button {
 	margin: 0 auto 0.25rem auto;
 	align-self: flex-start;
 	font-size: 0.7rem;
-	font-weight: 400;
+	font-weight: 600;
 	letter-spacing: 0.5px;
 }
 
