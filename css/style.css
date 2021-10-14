@@ -255,7 +255,7 @@ button {
 	align-items: center;
 	width: 90%;
 	height: 4.75rem;
-	margin: 0.75rem auto 0.5rem auto;
+	margin: 0.75rem auto 0 auto;
 	border-radius: 8px;
 	border: 2px solid #c7c4c4;
 	background-color: #eeebeb;
@@ -302,7 +302,7 @@ button {
 =============================================== */
 
 #members {
-	margin: 1rem auto;
+	margin: 0.5rem auto 1rem auto;
 }
 
 .new-member,
