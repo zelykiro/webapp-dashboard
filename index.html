@@ -12,6 +12,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/768.css" />
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
 			defer
@@ -49,7 +50,7 @@
 				</div>
 				<ul class="header__notifications">
 					<li>
-						<span class="notification-text">You have 3 unread messages</span
+						<span class="notification-text">You have unread messages</span
 						><span class="close-notification"></span>
 					</li>
 					<li>
@@ -114,18 +115,26 @@
 				</a>
 			</nav>
 			<main>
-				<!-- <h2 class="dashboard__title">Dashboard</h2> -->
 				<div class="dashboard">
-					<!--<span class="alert">Alert: You have unread messages</span> -->
+					<div class="dashboard__head">
+						<h2 class="dashboard__title">Dashboard</h2>
+						<span></span>
+					</div>
+					<div class="alert">
+						<span>Alert: You have unread messages</span>
+						<span></span>
+					</div>
 					<section class="graph" id="graphs">
 						<div class="graph__web">
-							<h3 class="graph__title">TRAFFIC</h3>
-							<ul>
-								<li>Hourly</li>
-								<li>Daily</li>
-								<li>Weekly</li>
-								<li>Monthly</li>
-							</ul>
+							<div>
+								<h3 class="graph__title">TRAFFIC</h3>
+								<ul>
+									<li class="active">Hourly</li>
+									<li>Daily</li>
+									<li>Weekly</li>
+									<li>Monthly</li>
+								</ul>
+							</div>
 							<div class="graph-container">
 								<canvas id="web-canvas"></canvas>
 							</div>
@@ -201,34 +210,42 @@
 							<h3>NEW MEMBERS</h3>
 							<div class="member">
 								<img src="images/member-1.jpg" />
-								<h4 class="member__name">Victoria Chambers</h4>
-								<a class="member__mail" href="victoria.chambers80@example.com"
-									>victoria.chambers80@example.com</a
-								>
+								<div>
+									<h4 class="member__name">Victoria Chambers</h4>
+									<a class="member__mail" href="victoria.chambers80@example.com"
+										>victoria.chambers80@example.com</a
+									>
+								</div>
 								<p>10/15/20</p>
 							</div>
 							<div class="member">
 								<img src="images/member-2.jpg" />
-								<h4 class="member__name">Dale Byrd</h4>
-								<a class="member__mail" href="dale.byrd52@example.com"
-									>dale.byrd52@example.com</a
-								>
+								<div>
+									<h4 class="member__name">Dale Byrd</h4>
+									<a class="member__mail" href="dale.byrd52@example.com"
+										>dale.byrd52@example.com</a
+									>
+								</div>
 								<p>10/15/20</p>
 							</div>
 							<div class="member">
 								<img src="images/member-3.jpg" />
-								<h4 class="member__name">Dawn Wood</h4>
-								<a class="member__mail" href="dawn.wood16@example.com"
-									>dawn.wood16@example.com</a
-								>
+								<div>
+									<h4 class="member__name">Dawn Wood</h4>
+									<a class="member__mail" href="dawn.wood16@example.com"
+										>dawn.wood16@example.com</a
+									>
+								</div>
 								<p>10/15/20</p>
 							</div>
 							<div class="member">
 								<img src="images/member-4.jpg" />
-								<h4 class="member__name">Dan Oliver</h4>
-								<a class="member__mail" href="dan.oliver82@example.com"
-									>dan.oliver82@example.com</a
-								>
+								<div>
+									<h4 class="member__name">Dan Oliver</h4>
+									<a class="member__mail" href="dan.oliver82@example.com"
+										>dan.oliver82@example.com</a
+									>
+								</div>
 								<p>10/15/20</p>
 							</div>
 						</div>
@@ -236,49 +253,61 @@
 							<h3>RECENT ACTIVITY</h3>
 							<div class="recent">
 								<img src="images/member-1.jpg" />
-								<p class="recent__info">
-									Victoria Chambers commented on
-									<strong>WebApp's SEO Tips</strong>
-								</p>
-								<p>4 hours ago</p>
+								<div>
+									<p class="recent__info">
+										Victoria Chambers commented on
+										<strong>WebApp's SEO Tips</strong>
+									</p>
+									<p>4 hours ago</p>
+								</div>
+								<span>></span>
 							</div>
 							<div class="recent">
 								<img src="images/member-2.jpg" />
-								<p class="recent__info">
-									Dale Byrd liked the post
-									<strong>Facebook's Changes for 2021</strong>
-								</p>
-								<p>5 hours ago</p>
+								<div>
+									<p class="recent__info">
+										Dale Byrd liked the post
+										<strong>Facebook's Changes for 2021</strong>
+									</p>
+									<p>5 hours ago</p>
+								</div>
+								<span>></span>
 							</div>
 							<div class="recent">
 								<img src="images/member-3.jpg" />
-								<p class="recent__info">
-									Dawn Wood commented on
-									<strong>Facebook's Changes for 2021</strong>
-								</p>
-								<p>5 hours ago</p>
+								<div>
+									<p class="recent__info">
+										Dawn Wood commented on
+										<strong>Facebook's Changes for 2021</strong>
+									</p>
+									<p>5 hours ago</p>
+								</div>
+								<span>></span>
 							</div>
 							<div class="recent">
 								<img src="images/member-4.jpg" />
-								<p class="recent__info">
-									Dan Oliver posted <strong>WebApp's SEO Tips</strong>
-								</p>
-								<p>1 day ago</p>
+								<div>
+									<p class="recent__info">
+										Dan Oliver posted <strong>WebApp's SEO Tips</strong>
+									</p>
+									<p>1 day ago</p>
+								</div>
+								<span>></span>
 							</div>
 						</div>
-						<form class="message" action="" method="">
-							<h3>MESSAGE USER</h3>
-							<input type="text" id="username" placeholder="Search for User" />
-							<textarea
-								name="message"
-								id="message"
-								cols="30"
-								rows="10"
-								placeholder="Message For User"
-							></textarea>
-							<button type="submit">SEND</button>
-						</form>
 					</section>
+					<form class="message" action="" method="">
+						<h3>MESSAGE USER</h3>
+						<input type="text" id="username" placeholder="Search for User" />
+						<textarea
+							name="message"
+							id="message"
+							cols="30"
+							rows="10"
+							placeholder="Message For User"
+						></textarea>
+						<button type="submit">SEND</button>
+					</form>
 					<section class="settings" id="settings">
 						<h3>SETTINGS</h3>
 						<div class="checkbox-container">
