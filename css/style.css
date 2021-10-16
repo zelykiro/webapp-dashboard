@@ -28,6 +28,44 @@ button {
 }
 
 /* ===============================================
+=================== KEYFRAMES ====================
+=============================================== */
+
+@keyframes shake {
+	25% {
+		transform: rotate(30deg);
+	}
+
+	50% {
+		transform: rotate(-30deg);
+	}
+
+	75% {
+		transform: rotate(15deg);
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+/* ===============================================
 ===================== HEADER =====================
 =============================================== */
 
@@ -70,13 +108,18 @@ button {
 	cursor: pointer;
 }
 
+.svg-container:hover {
+	animation: shake 2s ease-out backwards;
+}
+
 .header__bell {
 	height: 1.05rem;
 	fill: #e0e1eb;
 	position: relative;
 }
 
-.svg-container span {
+.new-notifications {
+	display: none;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -88,6 +131,7 @@ button {
 
 .header__notifications {
 	display: none;
+	opacity: 0;
 	width: 250px;
 	position: absolute;
 	top: 3rem;
@@ -96,6 +140,10 @@ button {
 	border-radius: 6px;
 	box-shadow: 0px 0px 2px 1px skyblue;
 	z-index: 100;
+}
+
+.display {
+	display: block;
 }
 
 .header__notifications li {
@@ -849,5 +897,92 @@ button {
 
 	.settings__btns {
 		width: 95%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	/* ===============================================
+	================ MEMBERS SECTION =================
+	=============================================== */
+
+	#members {
+		margin-bottom: 0;
+	}
+
+	.new-member,
+	.recent-activity {
+		width: 50%;
+		border-bottom: 1px solid #9b9ebb;
+	}
+
+	.new-member {
+		float: left;
+		border-right: 1px solid #9b9ebb;
+	}
+
+	.recent div {
+		width: 60%;
+	}
+
+	.recent__info {
+		text-align: left;
+	}
+
+	#members h3 {
+		width: 90%;
+	}
+
+	.member,
+	.recent {
+		width: 95%;
+	}
+
+	/* ===============================================
+	============ MESSAGE FORM & SETTINGS =============
+	=============================================== */
+
+	.message,
+	.settings {
+		width: 50%;
+		height: 340px;
+		margin: 0;
+		padding: 0.5rem 0;
+		display: flex;
+		flex-direction: column;
+		border: none;
+	}
+
+	.message h3,
+	.settings h3 {
+		width: 90%;
+	}
+
+	.message button,
+	.settings__btns {
+		margin: auto auto 0 auto;
+	}
+
+	.message {
+		float: left;
+		border-right: 1px solid #9b9ebb;
+	}
+
+	.message input,
+	.message textarea,
+	.message button {
+		width: 90%;
+	}
+
+	.message textarea {
+		margin-top: 0;
+	}
+
+	.checkbox-container {
+		width: 60%;
+		margin-right: 30%;
+	}
+
+	.settings select {
+		margin: 2rem auto 0 auto;
 	}
 }
