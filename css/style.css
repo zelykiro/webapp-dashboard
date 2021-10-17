@@ -33,15 +33,15 @@ button {
 
 @keyframes shake {
 	25% {
-		transform: rotate(30deg);
+		transform: rotate(15deg);
 	}
 
 	50% {
-		transform: rotate(-30deg);
+		transform: rotate(-15deg);
 	}
 
 	75% {
-		transform: rotate(15deg);
+		transform: rotate(10deg);
 	}
 }
 
@@ -109,7 +109,7 @@ button {
 }
 
 .svg-container:hover {
-	animation: shake 2s ease-out backwards;
+	animation: shake 1.2s ease-out backwards;
 }
 
 .header__bell {
@@ -134,18 +134,17 @@ button {
 	opacity: 0;
 	width: 250px;
 	position: absolute;
-	top: 3rem;
+	top: 3.25rem;
 	right: 1rem;
 	background-color: #ffffff;
 	border-radius: 6px;
 	box-shadow: 0px 0px 2px 1px skyblue;
-	z-index: 100;
+	z-index: 10;
 }
 
 .display {
 	display: block;
 }
-
 .header__notifications li {
 	height: 2.5rem;
 	display: flex;
@@ -207,6 +206,15 @@ button {
 .close-notification:hover::before,
 .close-notification:hover::after {
 	background-color: white;
+}
+
+.header__notifications li:first-child {
+	display: none;
+	width: 100%;
+	justify-content: center;
+	border-bottom: none;
+	background-color: rgb(201, 197, 197);
+	color: rgb(94, 92, 92);
 }
 
 .header__profile {
