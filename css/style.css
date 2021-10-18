@@ -22,6 +22,10 @@ button {
 	cursor: pointer;
 }
 
+button:focus {
+	outline: none;
+}
+
 .container {
 	display: grid;
 	grid-template-areas: "header" "nav" "main";
@@ -138,7 +142,7 @@ button {
 	right: 1rem;
 	background-color: #ffffff;
 	border-radius: 6px;
-	box-shadow: 0px 0px 2px 1px skyblue;
+	box-shadow: 0px 0px 2px 0px skyblue;
 	z-index: 10;
 }
 
@@ -209,12 +213,17 @@ button {
 }
 
 .header__notifications li:first-child {
-	display: none;
+	display: flex;
 	width: 100%;
 	justify-content: center;
+	border-radius: 5px;
 	border-bottom: none;
-	background-color: rgb(201, 197, 197);
-	color: rgb(94, 92, 92);
+	background-color: #7477bf;
+	color: white;
+}
+
+.header__notifications li:last-child {
+	border-bottom: none;
 }
 
 .header__profile {
@@ -292,10 +301,11 @@ button {
 .alert {
 	width: 90%;
 	height: 2rem;
-	display: flex;
+	display: none;
+	opacity: 0;
 	align-items: center;
 	padding: 10px;
-	margin: 0.75rem auto;
+	margin: 0.5rem auto;
 	background-color: #7477bf;
 	border-radius: 6px;
 }
@@ -369,6 +379,7 @@ button {
 .graph__web ul {
 	width: 90%;
 	margin: 0.5rem auto;
+	height: 2.5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -392,6 +403,10 @@ button {
 	color: #ffffff;
 }
 
+.graph__web .graph-container {
+	margin: 0.25rem auto;
+}
+
 .graph__daily,
 .graph__mobile,
 .graph__social {
@@ -399,6 +414,12 @@ button {
 	padding: 0.5rem 0 0.25rem 0;
 	margin: 0.25rem auto;
 	border-top: 1px solid #9b9ebb;
+}
+
+.graph-container {
+	width: 90%;
+	margin: 1rem auto 0.5rem auto;
+	height: 150px;
 }
 
 .social {
@@ -537,9 +558,11 @@ button {
 =============================================== */
 
 .message {
+	position: relative;
 	padding-top: 0.5rem;
 	margin: 0.5rem auto;
 	border-top: 1px solid #9b9ebb;
+	overflow: hidden;
 }
 
 .message h3 {
@@ -581,6 +604,45 @@ button {
 	margin: auto;
 	background-color: #7477bf;
 	color: white;
+}
+
+.user-suggestion {
+	position: absolute;
+	width: 80%;
+	top: 90px;
+	left: 10%;
+}
+
+.user-suggestion li {
+	list-style: none;
+	background-color: rgb(231, 222, 222);
+	border-bottom: 1px solid rgb(97, 94, 94);
+	font-size: 0.65rem;
+}
+
+.success,
+.error {
+	display: block;
+	position: absolute;
+	left: 10%;
+	top: 2rem;
+	width: 80%;
+	padding: 8px;
+	height: 2rem;
+	border-radius: 20px;
+	text-align: center;
+	transition: transform 1s ease-out;
+	transform: translateY(-200%);
+	font-size: 0.8rem;
+	color: white;
+}
+
+.success {
+	background-color: #47dd47da;
+}
+
+.error {
+	background-color: rgb(228, 69, 69);
 }
 
 /* ===============================================
@@ -765,28 +827,46 @@ button {
 
 	.graph__web {
 		grid-column: 1/3;
-		height: 22rem;
+		height: 17rem;
+		margin-top: 0;
+		padding-top: 0;
 	}
 
 	.graph__web div:first-child {
 		display: flex;
 		width: 95%;
-		margin: 1rem auto;
+		margin: 0 auto 0.5rem auto;
 		align-items: center;
+	}
+
+	.graph__web ul {
+		width: 90%;
+		justify-content: flex-end;
 	}
 
 	.graph__web .graph__title {
 		margin: 0.5rem auto;
 	}
 
+	.graph__web .graph-container {
+		width: 95%;
+		height: 250px;
+	}
+
 	.graph__daily,
 	.graph__mobile {
-		height: 17rem;
+		height: 12rem;
 		border-bottom: 1px solid #9b9ebb;
 	}
 
 	.graph__daily {
 		border-right: 1px solid #9b9ebb;
+	}
+
+	.graph__daily .graph-container,
+	.graph__mobile .graph-container {
+		margin-top: 1.75rem;
+		height: 150px;
 	}
 
 	.graph-container {
@@ -909,6 +989,28 @@ button {
 }
 
 @media screen and (min-width: 1024px) {
+	/* ===============================================
+	================= GRAPHS SECTION =================
+	=============================================== */
+
+	.graph__web {
+		height: 24rem;
+	}
+
+	.graph__web .graph-container {
+		height: 400px;
+	}
+
+	.graph__daily,
+	.graph__mobile {
+		height: 16rem;
+	}
+
+	.graph__daily .graph-container,
+	.graph__mobile .graph-container {
+		margin-top: 2.25rem;
+		height: 200px;
+	}
 	/* ===============================================
 	================ MEMBERS SECTION =================
 	=============================================== */
