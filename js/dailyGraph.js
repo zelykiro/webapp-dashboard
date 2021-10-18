@@ -1,4 +1,9 @@
 const dailyCanvas = document.getElementById("daily-canvas").getContext("2d");
+
+Chart.defaults.font.family = "Open Sans";
+Chart.defaults.font.size = "11";
+Chart.defaults.font.weight = "400";
+
 const dailyChart = new Chart(dailyCanvas, {
 	type: "bar",
 

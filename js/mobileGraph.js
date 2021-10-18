@@ -20,8 +20,9 @@ const mobileChart = new Chart(mobileCanvas, {
 				position: "right",
 				labels: {
 					font: {
+						family: "Open Sans",
 						size: 12,
-						weight: 700,
+						weight: 600,
 					},
 					boxWidth: 20,
 				},

@@ -75,7 +75,7 @@ const dataMonthly = {
 
 const webCanvas = document.getElementById("web-canvas").getContext("2d");
 
-Chart.defaults.font.family = "Lato";
+Chart.defaults.font.family = "Open Sans";
 Chart.defaults.font.size = "11";
 Chart.defaults.font.weight = "400";
 
@@ -83,14 +83,15 @@ const webChart = new Chart(webCanvas, {
 	type: "line",
 
 	data: {
-		labels: dataMonthly.labels,
+		labels: dataHourly.labels,
 		datasets: [
 			{
 				pointBackgroundColor: "rgba(116,119,191,0.3)",
 				backgroundColor: "rgba(116,119,191,0.3)",
 				borderWidth: 1,
 				fill: true,
-				data: dataMonthly.data,
+				tension: 0.3,
+				data: dataHourly.data,
 			},
 		],
 	},
@@ -104,10 +105,10 @@ const webChart = new Chart(webCanvas, {
 		scales: {
 			y: {
 				min: 0,
-				max: dataMonthly.max,
+				max: dataHourly.max,
 			},
 		},
 		responsive: true,
-		webtainAspectRatio: false,
+		maintainAspectRatio: false,
 	},
 });
