@@ -20,11 +20,8 @@ function loadSavedSettings() {
 	if (savedSettings.length) {
 		emailNotif.checked = savedSettings[0]["emailNotification"];
 		profileVis.checked = savedSettings[0]["profileVisibility"];
-		if (savedSettings[0]["timezone"]) {
-			document
-				.querySelector(`[value="${savedSettings[0]["timezone"]}"]`)
-				.setAttribute("selected", true);
-		}
+		document.querySelector("select").selectedIndex =
+			savedSettings[0]["timezone"];
 	}
 	checkBoxLabel();
 }
@@ -167,8 +164,8 @@ settings.addEventListener("click", (event) => {
 		savedSettings[0][obj] = checked;
 	}
 	if (element.tagName === "OPTION") {
-		const timezoneVal = element.value;
-		savedSettings[0].timezone = timezoneVal;
+		const timezoneVal = element.parentNode.selectedIndex;
+		savedSettings[0]["timezone"] = timezoneVal;
 	}
 	localStorage.setItem("settings", JSON.stringify(savedSettings));
 
