@@ -174,8 +174,9 @@ settings.addEventListener("click", (event) => {
 		const obj = hyphenToCamel(element.name);
 		savedSettings[0][obj] = checked;
 	}
-	if (element.tagName === "SELECT") {
+	if (element.tagName === "OPTION") {
 		const val = element.value;
+		console.log(val);
 		savedSettings[0]["timezone"] = val;
 	}
 	localStorage.setItem("settings", JSON.stringify(savedSettings));
