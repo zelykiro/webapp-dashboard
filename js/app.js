@@ -135,12 +135,7 @@ notifications.addEventListener("click", (event) => {
 				alertMessage.style.display = "none";
 			}, 500);
 			noNotifications.style.display = "flex";
-			setTimeout(() => {
-				notifications.style.animation = "fade-out 1s ease-out forwards";
-				setTimeout(() => {
-					notifications.classList.remove("display");
-				}, 1000);
-			}, 2000);
+			notifications.classList.remove("display");
 		}
 	}
 });
