@@ -53,6 +53,8 @@ The webpage acts as a dashboard for a webapp with user informations
 
 
   - The user settings are stored using the built in 'local storage' system
+  
+  - The stored settings can be cleared by pressing the 'cancel' button 
 
 
 
