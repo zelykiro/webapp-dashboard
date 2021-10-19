@@ -21,9 +21,11 @@ function loadSavedSettings() {
 	if (savedSettings.length) {
 		emailNotif.checked = savedSettings[0]["emailNotification"];
 		profileVis.checked = savedSettings[0]["profileVisibility"];
-		document
-			.querySelector(`[value="${savedSettings[0]["timezone"]}"]`)
-			.setAttribute("selected", true);
+		if (savedSettings[0]["timezone"]) {
+			document
+				.querySelector(`[value="${savedSettings[0]["timezone"]}"]`)
+				.setAttribute("selected", true);
+		}
 	}
 	checkBoxLabel();
 }
