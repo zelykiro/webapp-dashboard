@@ -21,7 +21,7 @@ The webpage acts as a dashboard for a webapp with user informations
   - The user name input field shows available users based on the text entered
 
   - When the 'send' button is pressed, the form displays error/success messages based on the contents entered
-  - _Since this is a front-end project no message gets actually sent_
+    - _Since this is a front-end project no message gets actually sent_
 
 - The last section is a settings's section
 
