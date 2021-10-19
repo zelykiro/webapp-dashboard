@@ -40,8 +40,6 @@ The webpage acts as a dashboard for a webapp with user informations
 
   - The stored settings can be cleared by pressing the 'cancel' button
 
-  - The stored settings can be cleared by pressing the 'cancel' button
-
 ### Built With
 
 - JavaScript
