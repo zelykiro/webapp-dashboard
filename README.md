@@ -1,5 +1,3 @@
-# **SITE UNDER CONSTRUCTION**
-
 # Project Title
 
 
@@ -8,13 +6,54 @@ Web-App Dashboard
 
 
 
-### Goal of the project
+# How it works
 
 
 
-- To build a web dashboard complete with JavaScript-driven charts and graphs that is responsive across all screen sizes
+The webpage acts as a dashboard for a webapp with user informations
 
-- To put SVG graphics and animation methods into practice
+
+
+- The first section is a chart's section that shows 4 different traffics
+
+
+
+  - The line chart's data can be changed based on user preference to
+
+    - Hourly,
+
+    - Daily,
+
+    - Weekly or
+
+    - Monthly
+
+
+
+- The second section is a member's section that shows new members and recent activities
+
+
+
+- The third section is a message form that can be used to send messages to available users
+
+
+
+  - The user name input field shows available users based on the text entered
+
+
+
+  - When the 'send' button is pressed, the form displays error/success messages based on the contents entered
+
+    - _Since this is a front-end project no message gets actually sent_
+
+
+
+- The last section is a settings's section
+
+
+
+  - The user settings are stored using the built in 'local storage' system
+
 
 
 ### Built With
@@ -22,13 +61,20 @@ Web-App Dashboard
 
 
 - JavaScript
+
+
+
   1. Vanilla JavaScript
+
   2. Chart library: Chart.js [[github]](https://github.com/chartjs/Chart.js)
+
+
 
 - CSS
 
-- HTML
 
+
+- HTML
 
 
 
