@@ -167,8 +167,8 @@ settings.addEventListener("click", (event) => {
 		savedSettings[0][obj] = checked;
 	}
 	if (element.tagName === "OPTION") {
-		const val = element.value;
-		savedSettings[0].timezone = val;
+		const timezoneVal = element.value;
+		savedSettings[0].timezone = timezoneVal;
 	}
 	localStorage.setItem("settings", JSON.stringify(savedSettings));
 
