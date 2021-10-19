@@ -1,4 +1,3 @@
-let count = 0;
 const form = document.querySelector("form");
 const formBtn = form.querySelector("button");
 const settings = document.querySelector(".settings");
@@ -104,8 +103,7 @@ function hyphenToCamel(name) {
 }
 
 bell.addEventListener("click", () => {
-	count++;
-	if (count % 2) {
+	if (!notifications.className.includes("display")) {
 		notifications.style.animation = "fade-in 1s ease-out forwards";
 		notifications.classList.toggle("display");
 	} else {
@@ -143,7 +141,6 @@ notifications.addEventListener("click", (event) => {
 					notifications.classList.remove("display");
 				}, 1000);
 			}, 2000);
-			count++;
 		}
 	}
 });
