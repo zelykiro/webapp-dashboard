@@ -9,10 +9,10 @@ The webpage acts as a dashboard for a webapp with user informations
 The first section is a chart's section that shows 4 different traffics
 
 - The line chart's data can be changed based on user preference to
-  1. Hourly,
-  2. Daily,
-  3. Weekly or
-  4. Monthly
+  - Hourly,
+  - Daily,
+  - Weekly or
+  - Monthly
 
 The second section is a member's section that shows new members and recent activities
 
