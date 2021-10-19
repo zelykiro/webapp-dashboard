@@ -8,7 +8,7 @@ const dailyChart = new Chart(dailyCanvas, {
 	type: "bar",
 
 	data: {
-		labels: ["S", "M", "T", "W", "T", "F", "S"],
+		labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
 		datasets: [
 			{
 				data: [75, 110, 175, 125, 220, 200, 100],
@@ -20,6 +20,9 @@ const dailyChart = new Chart(dailyCanvas, {
 
 	options: {
 		plugins: {
+			tooltip: {
+				boxWidth: 10,
+			},
 			legend: {
 				display: false,
 			},

@@ -27,6 +27,9 @@ const mobileChart = new Chart(mobileCanvas, {
 					boxWidth: 20,
 				},
 			},
+			tooltip: {
+				boxWidth: 10,
+			},
 		},
 		responsive: true,
 		maintainAspectRatio: false,

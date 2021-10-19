@@ -1,13 +1,13 @@
 let count = 0;
+const form = document.querySelector("form");
+const formBtn = form.querySelector("button");
 const settings = document.querySelector(".settings");
 const bell = document.querySelector(".svg-container");
 const alertMessage = document.querySelector(".alert");
-const messageForm = document.querySelector(".message");
-const inputUserName = document.querySelector("#username");
-const formBtn = messageForm.querySelector("button");
-const unreadNotifications = document.querySelector(".new-notifications");
-const notifications = document.querySelector(".header__notifications");
+const webGraphButtons = document.querySelector(".graph__web ul");
 const checkBoxes = document.querySelectorAll(`[type="checkbox"]`);
+const notifications = document.querySelector(".header__notifications");
+const unreadNotifications = document.querySelector(".new-notifications");
 const profileVis = document.querySelector(`input[name="profile-visibility"]`);
 const emailNotif = document.querySelector(`input[name="email-notification"]`);
 const noNotifications = document.querySelector(
@@ -67,15 +67,17 @@ function renderNotification(text) {
 
 function submitForm(event) {
 	event.preventDefault();
-	let span;
+	const span = form.querySelector("span");
+	span.removeAttribute("class");
 	const userName = document.getElementById("username").value;
 	const userMessage = document.getElementById("message").value;
 	if (users.includes(userName) && userMessage.trim()) {
-		span = document.querySelector(".success");
+		span.classList.add("success");
+		span.textContent = "Message Successfully Sent!";
 		document.getElementById("username").value = "";
 		document.getElementById("message").value = "";
 	} else {
-		span = document.querySelector(".error");
+		span.classList.add("error");
 		if (!userName) {
 			span.textContent = "Please Enter The Username";
 		} else if (!users.includes(userName)) {
@@ -142,6 +144,19 @@ notifications.addEventListener("click", (event) => {
 			}, 2000);
 			count++;
 		}
+	}
+});
+
+webGraphButtons.addEventListener("click", (event) => {
+	const element = event.target;
+	if (element.tagName === "LI" && !element.className.includes("active")) {
+		document.querySelector(".active").removeAttribute("class");
+		element.classList.add("active");
+		const obj = `data${element.textContent}`;
+		webChart["data"]["labels"] = formats[obj].labels;
+		webChart["data"]["datasets"][0]["data"] = formats[obj].data;
+		webChart["options"]["scales"]["y"]["max"] = formats[obj].max;
+		webChart.update();
 	}
 });
 
