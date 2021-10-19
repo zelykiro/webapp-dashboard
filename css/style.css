@@ -720,7 +720,7 @@ button:focus {
 }
 
 .slider-container input:checked + span::after {
-	transform: translateX(50px);
+	transform: translateX(49px);
 }
 
 .settings select {
