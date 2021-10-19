@@ -719,7 +719,7 @@ button:focus {
 	color: white;
 }
 
-.slider-container input:checked + span::after {
+.slider-container input:checked + .slider::after {
 	transform: translateX(49px);
 }
 
