@@ -85,9 +85,9 @@ function submitForm(event) {
 			document.getElementById("username").value = "";
 		} else span.textContent = "Please Enter The Message";
 	}
-	span.style.transform = "translateY(15%)";
+	span.parentNode.style.transform = "translateY(0%)";
 	setTimeout(() => {
-		span.removeAttribute("style");
+		span.parentNode.removeAttribute("style");
 	}, 2000);
 }
 

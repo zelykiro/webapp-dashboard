@@ -608,18 +608,23 @@ button:focus {
 	color: white;
 }
 
-.message span {
-	display: block;
+.message div {
 	position: absolute;
+	display: flex;
+	justify-content: center;
 	left: 10%;
-	top: 2rem;
-	width: 241px;
-	padding: 8px;
-	height: 2rem;
-	border-radius: 20px;
+	top: 2.35rem;
+	width: 80%;
 	text-align: center;
 	transition: transform 1s ease-out;
-	transform: translateY(-200%);
+	transform: translateY(-225%);
+}
+
+.message span {
+	padding: 8px;
+	height: 2rem;
+	width: 260px;
+	border-radius: 20px;
 	font-size: 0.8rem;
 	color: white;
 }
@@ -629,7 +634,7 @@ button:focus {
 }
 
 .error {
-	background-color: rgb(228, 69, 69);
+	background-color: rgba(230, 31, 31, 0.836);
 }
 
 /* ===============================================
@@ -698,7 +703,7 @@ button:focus {
 .slider::after {
 	content: "";
 	position: absolute;
-	top: 3.5px;
+	top: 3px;
 	left: 6px;
 	height: 21px;
 	width: 21px;
@@ -954,6 +959,11 @@ button:focus {
 		width: 95%;
 	}
 
+	/* .message div {
+		left: 25%;
+		width: 50%;
+	} */
+
 	/* ===============================================
 	================ SETTINGS SECTION ================
 	=============================================== */
@@ -973,11 +983,6 @@ button:focus {
 
 	.settings__btns {
 		width: 95%;
-	}
-
-	.message span {
-		left: 25%;
-		width: 50%;
 	}
 }
 
@@ -1078,6 +1083,11 @@ button:focus {
 
 	.message textarea {
 		margin-top: 0;
+	}
+
+	.message div {
+		top: 2.6rem;
+		transform: translateY(-250%);
 	}
 
 	.checkbox-container {
