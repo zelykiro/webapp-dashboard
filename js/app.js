@@ -13,30 +13,22 @@ const noNotifications = document.querySelector(
 	".header__notifications li:first-child"
 );
 
+const users = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
+
 function loadSavedSettings() {
 	const savedSettings = checkSavedSettings();
-	const timezone = checkTimezone();
 	if (savedSettings.length) {
 		emailNotif.checked = savedSettings[0]["emailNotification"];
 		profileVis.checked = savedSettings[0]["profileVisibility"];
+		document.querySelector("select").selectedIndex =
+			savedSettings[0]["timezone"];
 	}
 	checkBoxLabel();
-	if (timezone.length)
-		document.querySelector("select").selectedIndex = timezone[0]["timezone"];
 }
 
 function checkSavedSettings() {
 	if (localStorage.getItem("settings")) {
 		const array = JSON.parse(localStorage.getItem("settings"));
-		return array;
-	} else {
-		return [{}];
-	}
-}
-
-function checkTimezone() {
-	if (localStorage.getItem("timezone")) {
-		const array = JSON.parse(localStorage.getItem("timezone"));
 		return array;
 	} else {
 		return [{}];
@@ -165,19 +157,17 @@ formBtn.addEventListener("click", (event) => {
 settings.addEventListener("click", (event) => {
 	const element = event.target;
 	const savedSettings = checkSavedSettings();
-	const timezone = checkTimezone();
 	if (element.tagName === "INPUT") {
 		checkBoxLabel();
 		const checked = element.checked;
 		const obj = hyphenToCamel(element.name);
 		savedSettings[0][obj] = checked;
-		localStorage.setItem("settings", JSON.stringify(savedSettings));
 	}
 	if (element.tagName === "OPTION") {
 		const timezoneVal = element.parentNode.selectedIndex;
-		timezone[0]["timezone"] = timezoneVal;
-		localStorage.setItem("timezone", JSON.stringify(timezone));
+		savedSettings[0]["timezone"] = timezoneVal;
 	}
+	localStorage.setItem("settings", JSON.stringify(savedSettings));
 
 	if (element.className.includes("cancelbtn")) {
 		localStorage.removeItem("settings");
