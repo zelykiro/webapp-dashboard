@@ -172,13 +172,15 @@ settings.addEventListener("click", (event) => {
         savedSettings[0][obj] = checked;
         localStorage.setItem("settings", JSON.stringify(savedSettings));
     }
-    if (element.tagName === "OPTION") {
-        const val = element.parentNode.selectedIndex;
+    if (element.className === "savebtn") {
+        const select = document.querySelector("select");
+        const val = select.selectedIndex;
         localStorage.setItem("timezone", val);
     }
 
     if (element.className.includes("cancelbtn")) {
         localStorage.removeItem("settings");
+        localStorage.removeItem("timezone");
         profileVis.checked = false;
         emailNotif.checked = false;
         checkBoxLabel();
