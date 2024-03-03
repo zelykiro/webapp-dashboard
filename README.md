@@ -1,6 +1,4 @@
-# Project Title
-
-Web-App Dashboard
+# Web-App Dashboard
 
 # How it works
 
